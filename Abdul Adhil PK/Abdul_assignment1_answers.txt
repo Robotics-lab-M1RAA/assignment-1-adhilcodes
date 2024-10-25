@@ -1,0 +1,78 @@
+1. ROS nodes :
+
+(a) rosnode list
+Output: 
+/rosout
+
+(b) It acts as a central hub for collecting and displaying log messages from various nodes within a ROS graph
+
+(c) rostopic list
+Output:
+/rosout
+/rosout_agg
+
+(d) Subscribers: 
+ * /rosout (http://adhil-Vostro-3590:44647/)
+
+(e) rostopic info /rosout
+Outout:
+Publishers: None
+
+(f) The /rosout node doesn't provide any services. It is used for logging purposes only.
+
+(g) When listed nodes it lists /rosout even though it is killed.
+
+(h)  
+rosnode cleanup: Removes dead nodes from the ROS master. It cleans up any stale node registrations.
+rosnode info <node>: Provides detailed information about a specific node, such as its published and subscribed topics, services, and its PID.
+rosnode kill <node>: Kills the specified node by shutting it down.
+rosnode list: Lists all the currently running nodes.
+rosnode machine: Lists all nodes that are running on a specific machine (IP address).
+rosnode ping <node>: Pings a node to check if it's alive and measures the communication latency with the node.
+
+___________________________________________________________________________
+2. ROS publisher node :
+
+(a) rosrun simple_package publisher_node1.py
+
+(b) 
+The node "Abdul_pubnode" is connected to the topic "Greetings" , which shows that the messages are being published.
+
+(d) 
+rosrun simple_package publisher_node2.py
+
+Three nodes (Abdul_node1, Abdul_node2, Abdul_node3), all publishing to the same Greetings topic
+
+___________________________________________________________________________
+
+3. ROS subscriber node:
+
+(b)  
+The publisher node 'Abdul_pubnode' publishing to the topic 'Greetings'. Subscriber node 'RAA24_subnode' is connected to the topic 'Greetings', and it receiving the messages published from the publisher.
+
+___________________________________________________________________________
+4. ROS publisher-subscriber node:
+
+(a) 
+/Abdul_73502_1729827567302
+/Abdul_73523_1729827579091
+/CET_73908_1729827722593
+/M1RAA_24_26_73615_1729827595006
+/rosout
+
+(b)
+/hello_class
+/hello_college
+/rosout
+/rosout_agg
+
+(c)
+/rosout node icollect and displays log messages from other ROS nodes
+
+(d) 
+use problems with other ROS tools.
+  rospy.init_node('M1RAA 2024', anonymous=True)
+  
+[FATAL] [1729827982.870718]: unable to register service [/M1RAA 2024_74058_1729827982728/get_loggers] with master: ERROR: parameter [service] contains illegal chars
+
+
